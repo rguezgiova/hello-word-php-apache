@@ -1,3 +1,3 @@
-FROM php:7.0-apache
+FROM php:7.4-cli
 COPY src/ /var/www/html
-EXPOSE 8090
+EXPOSE 80
