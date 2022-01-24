@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'docker build -t hello-word-php-apache .'
                 sh 'docker run -p 8081:8080 hello-word-php-apache'
+                sh 'docker -ps'
             }
         }
     }
