@@ -1,3 +1,3 @@
-FROM phpdockerio/php7-cli
+FROM php:7.0-apache
 COPY src/ /var/www/html
 EXPOSE 8090
