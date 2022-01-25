@@ -3,7 +3,7 @@ LABEL maintainer = "avgruniicorn69@gmail.com"
 
 ARG WAR_FILE=*.war
 
-ADD ${ARG} /usr/local/tomcat/webapps/
+ADD ${WAR_FILE} /usr/local/tomcat/webapps/
 
 EXPOSE 80
 CMD ["catalina.sh", "run"]
