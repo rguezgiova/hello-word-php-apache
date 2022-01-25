@@ -1,9 +1,9 @@
-FROM tomcat:8.0.37-jre7
+FROM tomcat:9.0
 LABEL maintainer = "avgruniicorn69@gmail.com"
 
 ARG WAR_FILE=target/*.war
 
 ADD ${WAR_FILE} /usr/local/tomcat/webapps/
 
-EXPOSE 80
+EXPOSE 8082
 CMD ["catalina.sh", "run"]
