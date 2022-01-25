@@ -24,7 +24,7 @@ pipeline {
         stage('Test Integration') {
             steps {
                 echo 'Testing integration...'
-                sh 'wget -m http://localhost:8082/app-web-demo/ | grep Giovanni'
+                sh 'wget http://localhost:8082/app-web-demo | grep Giovanni'
             }
         }
     }
