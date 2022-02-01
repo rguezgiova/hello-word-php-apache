@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'ping -c 4 www.giovannirgsystem.com'
-                sh 'ping -c 4 www.despliegue.giovannirgsystem.com'
+                sh 'wget http://www.giovannirgsystem.com'
+                sh 'wget http://www.despliegue.giovannirgsystem.com'
                 sh 'wget http://www.sftp.giovannirgsystem.com'
             }
         }
