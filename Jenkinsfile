@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sshpass -p examen sftp examen@www.sftp.giovannirgsystem.com'
+                sh 'sftp examen:examen@www.sftp.giovannirgsystem.com'
                 sh 'exit'
             }
         }
