@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ftp examen:examen@www.sftp.giovannirgsystem.com'
+                sh 'sftp examen@www.sftp.giovannirgsystem.com'
+                sh 'examen'
+                sh 'scp /home/daw/info.php examen@www.sftp.giovannirgsystem.com:despliegue'
                 sh 'exit'
             }
         }
